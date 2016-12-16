@@ -1,0 +1,17 @@
+<section class="canvas-wall row">
+    <div class="canvas-wall__listing-col col-sm-12">
+        <section class="two-col-horizontal-direction row">
+            <div class="canvas-wall__listing-col col-sm-12">
+                <div class="row">
+                    <h1>{{title}}</h1>
+                    <ul class="canvas col-xs-12">
+                        <li *ngFor="let item of wallObj.getWallItemsArray()">
+                            <h3 class="canvas-wall__listing-col__tile-header" *ngIf="item.showName">{{item.name}}</h3>
+                            <div [innerHTML]="item.socialValue | safe: 'html'"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
